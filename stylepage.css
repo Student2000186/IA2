@@ -584,14 +584,91 @@ textarea {
     font-size: 1.7rem;
   }
 
-  .slider {
-    height: 250px;
+  @media (max-width: 768px) {
+
+  /* =========================
+     FIX GRID SPACING
+  ========================= */
+  .checkout-layout,
+  .cart-layout,
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .prev,
-  .next {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
+  .two-column {
+    grid-template-columns: 1fr;
   }
+
+  /* =========================
+     FIX BUTTON STACKING
+  ========================= */
+  .button-group,
+  .button-row,
+  .wrap-buttons,
+  .multi-line {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* =========================
+     FIX CARD WIDTH
+  ========================= */
+  .product-card,
+  .form-card,
+  .summary-card,
+  .cart-table-card,
+  .info-card {
+    width: 100%;
+  }
+
+  /* =========================
+     FIX NAVBAR
+  ========================= */
+  .navbar ul,
+  .site-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar a,
+  .site-nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* =========================
+     FIX HERO SPACING
+  ========================= */
+  .hero {
+    padding: 30px 16px;
+  }
+
+  /* =========================
+     FIX TABLE SCROLL
+  ========================= */
+  .cart-table {
+    font-size: 14px;
+  }
+
+  /* =========================
+     FIX IMAGES
+  ========================= */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* =========================
+     CENTER CONTENT
+  ========================= */
+  .container {
+    width: 95%;
+  }
+}
 }
