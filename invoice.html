@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EaziEats | Invoice</title>
+  <link rel="stylesheet" href="stylepage.css">
+</head>
+<body data-page="invoice">
+  <header class="site-header small-header">
+    <div class="container header-wrap">
+      <div class="brand">
+        <div class="logo">E</div>
+        <div>
+          <h1 class="header_logoText">EaziEats</h1>
+          <p>Customer Invoice</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+        <li><a class="active" href="invoice.html">Invoice</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <div class="container">
+      <section class="invoice-card" id="invoiceArea">
+        <div class="invoice-header">
+          <div>
+            <h2>EaziEats Invoice</h2>
+            <p><strong>Invoice #:</strong> <span id="invoiceNumber">N/A</span></p>
+            <p><strong>Date:</strong> <span id="invoiceDate">N/A</span></p>
+          </div>
+          <div class="invoice-brand">
+            <div class="logo large-logo">E</div>
+            <p>Fast. Fresh. Delivered the Easy Way.</p>
+          </div>
+        </div>
+
+        <div class="invoice-customer">
+          <h3>Customer Details</h3>
+          <p><strong>Name:</strong> <span id="invoiceName">N/A</span></p>
+          <p><strong>Email:</strong> <span id="invoiceEmail">N/A</span></p>
+          <p><strong>Phone:</strong> <span id="invoicePhone">N/A</span></p>
+          <p><strong>Address:</strong> <span id="invoiceAddress">N/A</span></p>
+          <p><strong>Parish/City:</strong> <span id="invoiceParish">N/A</span></p>
+          <p><strong>Payment Method:</strong> <span id="invoicePaymentMethod">N/A</span></p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody id="invoiceItems"></tbody>
+          </table>
+        </div>
+
+        <div class="invoice-totals">
+          <p><span>Subtotal:</span> <strong id="invoiceSubtotal">JMD 0.00</strong></p>
+          <p><span>Discount:</span> <strong id="invoiceDiscount">JMD 0.00</strong></p>
+          <p><span>Tax:</span> <strong id="invoiceTax">JMD 0.00</strong></p>
+          <p><span>Total:</span> <strong id="invoiceTotal">JMD 0.00</strong></p>
+          <p><span>Amount Paid:</span> <strong id="invoiceAmountPaid">JMD 0.00</strong></p>
+          <p><span>Balance:</span> <strong id="invoiceBalance">JMD 0.00</strong></p>
+        </div>
+      </section>
+
+      <div class="button-group top-gap">
+        <button class="btn" id="printInvoiceBtn" type="button">Print Invoice</button>
+        <a class="btn btn-secondary" href="index.html">Back to Home</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer simple-footer">
+    <p class="copyright">&copy; 2026 EaziEats. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

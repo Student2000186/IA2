@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EaziEats | Cart</title>
+  <link rel="stylesheet" href="stylepage.css">
+</head>
+<body data-page="cart">
+  <header class="site-header small-header">
+    <div class="container header-wrap">
+      <div class="brand">
+        <div class="logo">E</div>
+        <div>
+          <h1>EaziEats</h1>
+          <p>Your Shopping Cart</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a class="active" href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+        <li><a href="invoice.html">Invoice</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <div class="container cart-layout">
+      <section class="cart-table-card">
+        <h2>Your Shopping Cart</h2>
+        <div class="table-wrap">
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="cartTableBody"></tbody>
+          </table>
+        </div>
+        <div class="button-group top-gap">
+          <a href="index.html" class="btn btn-light">Continue Shopping</a>
+          <button id="clearCartBtn" class="btn btn-secondary" type="button">Clear Cart</button>
+        </div>
+      </section>
+
+      <aside class="summary-card">
+        <h3>Cart Summary</h3>
+        <p><span>Subtotal:</span> <strong id="cartSubtotal">JMD 0.00</strong></p>
+        <p><span>Discount:</span> <strong id="cartDiscount">JMD 0.00</strong></p>
+        <p><span>Tax (15%):</span> <strong id="cartTax">JMD 0.00</strong></p>
+        <p class="grand-total"><span>Total:</span> <strong id="cartTotal">JMD 0.00</strong></p>
+        <a href="checkout.html" class="btn full-width">Proceed to Checkout</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer simple-footer">
+    <p class="copyright">&copy; 2026 EaziEats. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

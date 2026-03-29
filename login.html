@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EaziEats | Login</title>
+  <link rel="stylesheet" href="stylepage.css">
+</head>
+<body data-page="login">
+  <header class="site-header small-header">
+    <div class="container header-wrap">
+      <div class="brand">
+        <div class="logo">E</div>
+        <div>
+          <h1 class="header_logoText">EaziEats</h1>
+          <p>Customer Login</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+        <li><a href="invoice.html">Invoice</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <div class="container form-container">
+      <section class="form-card">
+        <h2>Login to EaziEats</h2>
+        <p>Enter your account details to continue.</p>
+
+        <form id="loginForm">
+          <fieldset>
+            <legend>Customer Login</legend>
+
+            <label for="loginUser">Username or Email</label>
+            <input type="text" id="loginUser" name="loginUser" required>
+
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+
+            <div class="button-group">
+              <button type="submit" class="btn">Login</button>
+              <button type="reset" class="btn btn-secondary">Clear</button>
+              <a class="btn btn-light" href="index.html">Back to Home</a>
+            </div>
+          </fieldset>
+        </form>
+
+        <p id="loginMessage" class="message"></p>
+        <p class="text-link">Don't have an account? <a href="register.html">Register here</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer simple-footer">
+    <p class="copyright">&copy; 2026 EaziEats. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EaziEats | Checkout</title>
+  <link rel="stylesheet" href="stylepage.css">
+</head>
+<body data-page="checkout">
+  <header class="site-header small-header">
+    <div class="container header-wrap">
+      <div class="brand">
+        <div class="logo">E</div>
+        <div>
+          <h1 class="header_logoText">EaziEats</h1>
+          <p>Checkout</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a class="active" href="checkout.html">Checkout</a></li>
+        <li><a href="invoice.html">Invoice</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <div class="container checkout-layout">
+      <section class="summary-card">
+        <h2>Order Summary</h2>
+        <div id="checkoutItems" class="checkout-items"></div>
+        <hr>
+        <p><span>Subtotal:</span> <strong id="checkoutSubtotal">JMD 0.00</strong></p>
+        <p><span>Discount:</span> <strong id="checkoutDiscount">JMD 0.00</strong></p>
+        <p><span>Tax (15%):</span> <strong id="checkoutTax">JMD 0.00</strong></p>
+        <p class="grand-total"><span>Total:</span> <strong id="checkoutTotal">JMD 0.00</strong></p>
+      </section>
+
+      <section class="form-card wide-card">
+        <h2>Shipping & Payment Details</h2>
+        <form id="checkoutForm">
+  <fieldset>
+    <legend>Checkout Information</legend>
+
+    <div class="two-column">
+      <div>
+        <label for="customerName">Customer Full Name</label>
+        <input type="text" id="customerName" required>
+      </div>
+      <div>
+        <label for="checkoutPhone">Phone Number</label>
+        <input type="tel" id="checkoutPhone" required>
+      </div>
+    </div>
+
+    <label for="checkoutEmail">Email Address</label>
+    <input type="email" id="checkoutEmail" required>
+
+    <label for="address">Delivery Address</label>
+    <textarea id="address" rows="3" required></textarea>
+
+    <div class="two-column">
+      <div>
+        <label for="parish">Parish/City</label>
+        <input type="text" id="parish" required>
+      </div>
+      <div>
+        <label for="amountPaid">Amount Being Paid (JMD)</label>
+        <input type="number" id="amountPaid" min="0" step="0.01" required>
+      </div>
+    </div>
+
+    <label for="paymentMethod">Payment Method</label>
+    <select id="paymentMethod" required>
+      <option value="">Select a method</option>
+      <option>Cash on Delivery</option>
+      <option>Debit Card</option>
+      <option>Credit Card</option>
+      <option>Online Transfer</option>
+    </select>
+
+    <div class="button-group multi-line">
+      <button type="button" id="confirmBtn" class="btn">Confirm</button>
+      <button type="button" id="cancelBtn" class="btn btn-secondary">Cancel</button>
+      <button type="reset" id="clearAllBtn" class="btn btn-light">Clear All</button>
+      <button type="submit" class="btn">Check Out</button>
+      <a href="index.html" class="btn btn-secondary">Close</a>
+    </div>
+  </fieldset>
+</form>
+        <p id="checkoutMessage" class="message"></p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer simple-footer">
+    <p class="copyright">&copy; 2026 EaziEats. All rights reserved.</p>
+  </footer>
+
+ <script src="script.js"></script>
+</body>
+</html>

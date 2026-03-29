@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EaziEats | Register</title>
+  <link rel="stylesheet" href="stylepage.css">
+</head>
+<body data-page="register">
+  <header class="site-header small-header">
+    <div class="container header-wrap">
+      <div class="brand">
+        <div class="logo">E</div>
+        <div>
+          <h1 class="header_logoText">EaziEats</h1>
+          <p>Create Your Account</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a class="active" href="register.html">Register</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+        <li><a href="invoice.html">Invoice</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <div class="container form-container">
+      <section class="form-card wide-card">
+        <h2>Create Your EaziEats Account</h2>
+        <p>Fill out the form below to register as a customer.</p>
+
+        <form id="registerForm">
+          <fieldset>
+            <legend>Registration Form</legend>
+
+            <div class="two-column">
+              <div>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+              </div>
+              <div>
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+              </div>
+            </div>
+
+            <div class="two-column">
+              <div>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+            </div>
+
+            <div class="two-column">
+              <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+              </div>
+              <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+              </div>
+            </div>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <div class="button-group">
+              <button type="submit" class="btn">Register</button>
+              <button type="reset" class="btn btn-secondary">Reset</button>
+              <a class="btn btn-light" href="login.html">Back to Login</a>
+            </div>
+          </fieldset>
+        </form>
+
+        <p id="registerMessage" class="message"></p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer simple-footer">
+    <p class="copyright">&copy; 2026 EaziEats. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
