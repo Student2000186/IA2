@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta information for character encoding and responsive design -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title displayed in browser tab -->
   <title>EaziEats | Home</title>
+
+  <!-- External CSS stylesheet -->
   <link rel="stylesheet" href="stylepage.css">
 </head>
+
 <body>
-  <!-- Header -->
+
+  <!-- =========================
+       HEADER SECTION
+       Displays website name and slogan
+  ========================== -->
   <header class="site-header">
     <div class="logo-area">
       <h1>EaziEats</h1>
@@ -15,10 +25,16 @@
     </div>
   </header>
 
-  <!-- Navigation -->
+  <!-- =========================
+       NAVIGATION BAR
+       Provides links to all pages in the website
+  ========================== -->
   <nav class="navbar">
     <ul>
+      <!-- Active class highlights current page -->
       <li><a href="index.html" class="active">Home</a></li>
+
+      <!-- Navigation links to other pages -->
       <li><a href="login.html">Login</a></li>
       <li><a href="register.html">Register</a></li>
       <li><a href="cart.html">Cart</a></li>
@@ -28,28 +44,57 @@
     </ul>
   </nav>
 
+  <!-- =========================
+       MAIN CONTENT AREA
+       Contains all visible page content
+  ========================== -->
   <main class="container">
-    <!-- Hero Section -->
+
+    <!-- =========================
+         HERO SECTION
+         Introductory section with call-to-action
+    ========================== -->
     <section class="hero">
       <div class="hero-text">
         <h2>Welcome to EaziEats</h2>
+
+        <!-- Brief description of the website -->
         <p>
           Your convenient online food store for tasty meals, refreshing drinks,
           and satisfying combo deals. Order in minutes and enjoy easy checkout.
         </p>
+
+        <!-- Button scrolls user to product section -->
         <a href="#products" class="btn">Order Now</a>
       </div>
     </section>
 
-    <!-- Products -->
+    <!-- =========================
+         PRODUCTS SECTION
+         Displays available meals/products
+    ========================== -->
     <section id="products" class="products-section">
       <h2>Featured Meals</h2>
+
+      <!-- Grid layout for product cards -->
       <div class="product-grid">
+
+        <!-- =========================
+             PRODUCT CARD 1
+        ========================== -->
         <article class="product-card">
           <img src="jerk_Chicken.jpg" alt="Jerk Chicken Meal">
+
+          <!-- Product name -->
           <h3>Jerk Chicken Meal</h3>
+
+          <!-- Product description -->
           <p>Spicy jerk chicken served with rice and vegetables.</p>
+
+          <!-- Product price -->
           <p class="price">JMD 1800</p>
+
+          <!-- Add to cart button with data attributes -->
           <button class="btn add-cart"
                   data-id="1"
                   data-name="Jerk Chicken Meal"
@@ -58,11 +103,14 @@
           </button>
         </article>
 
+        <!-- PRODUCT CARD 2 -->
         <article class="product-card">
           <img src="friedchicken.png" alt="Fried Chicken Combo">
           <h3>Fried Chicken Combo</h3>
           <p>Crispy fried chicken with fries and a drink.</p>
           <p class="price">JMD 1600</p>
+
+          <!-- Data attributes used by JavaScript -->
           <button class="btn add-cart"
                   data-id="2"
                   data-name="Fried Chicken Combo"
@@ -71,11 +119,13 @@
           </button>
         </article>
 
+        <!-- PRODUCT CARD 3 -->
         <article class="product-card">
           <img src="vegan.png" alt="Veggie Wrap">
           <h3>Veggie Wrap</h3>
           <p>Fresh vegetables wrapped in a soft tortilla.</p>
           <p class="price">JMD 1200</p>
+
           <button class="btn add-cart"
                   data-id="3"
                   data-name="Veggie Wrap"
@@ -84,11 +134,13 @@
           </button>
         </article>
 
+        <!-- PRODUCT CARD 4 -->
         <article class="product-card">
           <img src="Pasta.png" alt="Pasta Box">
           <h3>Pasta Box</h3>
           <p>Creamy pasta with seasoned chicken and herbs.</p>
           <p class="price">JMD 1500</p>
+
           <button class="btn add-cart"
                   data-id="4"
                   data-name="Pasta Box"
@@ -97,11 +149,13 @@
           </button>
         </article>
 
+        <!-- PRODUCT CARD 5 -->
         <article class="product-card">
           <img src="juice.png" alt="Fresh Juice">
           <h3>Fresh Juice</h3>
           <p>Chilled fruit juice made fresh daily.</p>
           <p class="price">JMD 600</p>
+
           <button class="btn add-cart"
                   data-id="5"
                   data-name="Fresh Juice"
@@ -110,11 +164,13 @@
           </button>
         </article>
 
+        <!-- PRODUCT CARD 6 -->
         <article class="product-card">
           <img src="burger.png" alt="Burger Combo">
           <h3>Burger Combo</h3>
           <p>Juicy burger served with fries and a soft drink.</p>
           <p class="price">JMD 1700</p>
+
           <button class="btn add-cart"
                   data-id="6"
                   data-name="Burger Combo"
@@ -122,34 +178,58 @@
             Add to Cart
           </button>
         </article>
+
       </div>
     </section>
 
-    <!-- Why Choose Us -->
+    <!-- =========================
+         FEATURES SECTION
+         Highlights key benefits of the service
+    ========================== -->
     <section class="features">
       <h2>Why Choose EaziEats?</h2>
+
+      <!-- Grid layout for features -->
       <div class="feature-grid">
+
+        <!-- Feature 1 -->
         <div class="feature-box">
           <h3>Fast Delivery</h3>
           <p>Your meals arrive quickly and conveniently.</p>
         </div>
+
+        <!-- Feature 2 -->
         <div class="feature-box">
           <h3>Affordable Prices</h3>
           <p>Enjoy tasty meals at student-friendly prices.</p>
         </div>
+
+        <!-- Feature 3 -->
         <div class="feature-box">
           <h3>Fresh Ingredients</h3>
           <p>We prepare meals using quality ingredients.</p>
         </div>
+
       </div>
     </section>
+
   </main>
 
+  <!-- =========================
+       FOOTER SECTION
+       Displays copyright and contact info
+  ========================== -->
   <footer class="site-footer">
     <p>&copy; 2026 EaziEats. All rights reserved.</p>
     <p>Email: info@eazieats.com</p>
   </footer>
 
+  <!-- =========================
+       JAVASCRIPT FILE
+       Handles interactivity (e.g., add to cart)
+  ========================== -->
   <script src="script.js"></script>
+
 </body>
+</html>
 </html>
