@@ -12,7 +12,7 @@
       <div class="brand">
         <div class="logo">E</div>
         <div>
-          <h1 class="header_logoText">EaziEats</h1>
+          <h1>EaziEats</h1>
           <p>Customer Login</p>
         </div>
       </div>
@@ -28,6 +28,7 @@
         <li><a href="cart.html">Cart</a></li>
         <li><a href="checkout.html">Checkout</a></li>
         <li><a href="invoice.html">Invoice</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
         <li><a href="about.html">About Us</a></li>
       </ul>
     </div>
@@ -37,28 +38,31 @@
     <div class="container form-container">
       <section class="form-card">
         <h2>Login to EaziEats</h2>
-        <p>Enter your account details to continue.</p>
+        <p>Enter your TRN and password to continue.</p>
 
         <form id="loginForm">
           <fieldset>
             <legend>Customer Login</legend>
 
-            <label for="loginUser">Username or Email</label>
-            <input type="text" id="loginUser" name="loginUser" required>
+            <label for="loginTrn">TRN</label>
+            <input type="text" id="loginTrn" placeholder="000-000-000" required>
 
             <label for="loginPassword">Password</label>
-            <input type="password" id="loginPassword" name="loginPassword" required>
+            <input type="password" id="loginPassword" required>
 
             <div class="button-group">
               <button type="submit" class="btn">Login</button>
-              <button type="reset" class="btn btn-secondary">Clear</button>
+              <button type="reset" class="btn btn-secondary">Cancel</button>
               <a class="btn btn-light" href="index.html">Back to Home</a>
             </div>
           </fieldset>
         </form>
 
         <p id="loginMessage" class="message"></p>
-        <p class="text-link">Don't have an account? <a href="register.html">Register here</a>.</p>
+        <p class="small-text">
+          Forgot your password?
+          <a href="#" id="resetPasswordLink">Reset using TRN</a>
+        </p>
       </section>
     </div>
   </main>
