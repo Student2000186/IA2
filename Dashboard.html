@@ -2,25 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EaziEats | Dashboard</title>
   <link rel="stylesheet" href="stylepage.css">
 </head>
-<body>
+<body data-page="dashboard">
+  <header class="site-header small-header">
+    <div class="container header-wrap">
+      <div class="brand">
+        <div class="logo">E</div>
+        <div>
+          <h1>EaziEats</h1>
+          <p>User Frequency & Invoice Dashboard</p>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<h1>User Analytics Dashboard</h1>
+  <nav class="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+        <li><a href="invoice.html">Invoice</a></li>
+        <li><a class="active" href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<h2>Gender Frequency</h2>
-<div id="genderChart"></div>
+  <main class="page-main">
+    <div class="container">
+      <section class="summary-card">
+        <h2>User Frequency</h2>
+        <div class="two-column">
+          <div class="info-card">
+            <h3>Gender Frequency</h3>
+            <div id="genderFrequency"></div>
+          </div>
+          <div class="info-card">
+            <h3>Age Group Frequency</h3>
+            <div id="ageFrequency"></div>
+          </div>
+        </div>
+      </section>
 
-<h2>Age Group Frequency</h2>
-<div id="ageChart"></div>
+      <section class="summary-card" style="margin-top: 24px;">
+        <h2>Search All Invoices by TRN</h2>
+        <div class="button-group">
+          <input type="text" id="searchTrn" placeholder="Enter TRN e.g. 123-456-789">
+          <button type="button" id="searchInvoiceBtn" class="btn">Search</button>
+        </div>
+        <div id="invoiceSearchResults" style="margin-top: 16px;"></div>
+      </section>
 
-<h2>Search Invoices</h2>
-<input type="text" id="searchTrn" placeholder="Enter TRN">
-<button onclick="ShowInvoices()">Search</button>
+      <section class="summary-card" style="margin-top: 24px;">
+        <h2>Current User Invoices</h2>
+        <div id="currentUserInvoices"></div>
+      </section>
+    </div>
+  </main>
 
-<div id="invoiceResults"></div>
+  <footer class="site-footer simple-footer">
+    <p class="copyright">&copy; 2026 EaziEats. All rights reserved.</p>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
