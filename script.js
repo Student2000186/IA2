@@ -1,7 +1,7 @@
 // =========================
 // LOCAL STORAGE KEYS
 // =========================
-const USERS_KEY = "RegistrationData";
+const USERS_KEY = "eazieatsUsers";
 const CART_KEY = "eazieatsCart";
 const ORDER_KEY = "eazieatsCurrentOrder";
 
@@ -75,7 +75,7 @@ document.querySelectorAll(".add-cart").forEach(button => {
 });
 
 // =========================
-// REGISTRATION (UPDATED)
+// REGISTRATION
 // =========================
 const registerForm = document.getElementById("registerForm");
 
@@ -85,7 +85,6 @@ if (registerForm) {
 
     const fullName = document.getElementById("fullName").value.trim();
     const dob = document.getElementById("dob").value;
-    const gender = document.getElementById("gender")?.value || "Other";
     const email = document.getElementById("email").value.trim();
     const phone = document.getElementById("phone").value.trim();
     const username = document.getElementById("username").value.trim();
@@ -98,7 +97,8 @@ if (registerForm) {
       registerMessage.style.color = "red";
       return;
     }
-      const users = getUsers();
+
+    const users = getUsers();
 
     const existingUser = users.find(user =>
       user.username === username || user.email === email
@@ -111,23 +111,18 @@ if (registerForm) {
     }
 
     const user = {
-  fullName,
-  dob,
-  gender,
-  email,
-  phone,
-  username,
-  password,
-  trn: "TRN-" + Date.now(), // temporary unique ID
-  dateRegistered: new Date().toLocaleDateString(),
-  cart: [],
-  invoices: []
-};
+      fullName,
+      dob,
+      email,
+      phone,
+      username,
+      password
+    };
 
     users.push(user);
     saveUsers(users);
-    
-    registerMessage.textContent = "Registration successful.";
+
+    registerMessage.textContent = "Registration successful. You can now log in.";
     registerMessage.style.color = "green";
     registerForm.reset();
   });
