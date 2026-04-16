@@ -1,7 +1,7 @@
 // =========================
 // LOCAL STORAGE KEYS
 // =========================
-const USERS_KEY = "eazieatsUsers";
+const USERS_KEY = "RegistrationData";
 const CART_KEY = "eazieatsCart";
 const ORDER_KEY = "eazieatsCurrentOrder";
 
@@ -111,14 +111,18 @@ if (registerForm) {
     }
 
     const user = {
-      fullName,
-      dob,
-      gender,
-      email,
-      phone,
-      username,
-      password
-    };
+  fullName,
+  dob,
+  gender,
+  email,
+  phone,
+  username,
+  password,
+  trn: "TRN-" + Date.now(), // temporary unique ID
+  dateRegistered: new Date().toLocaleDateString(),
+  cart: [],
+  invoices: []
+};
 
     users.push(user);
     saveUsers(users);
