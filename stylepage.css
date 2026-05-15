@@ -65,7 +65,7 @@ body {
   color: white;
   text-align: center;
   padding: 34px 20px;
-  
+  box-shadow: var(--shadow-soft);
 }
 
 .logo-area h1 {
